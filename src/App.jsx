@@ -3,6 +3,7 @@ import css from './App.module.css'
 import Options from './components/Options/Options'
 import Feedback from './components/Feedback/Feedback'
 import Notification from './components/Notification/Notification'
+import Description from './components/Description/Description'
 
 const OPTIONS = ["good", "neutral", "bad"];
 
@@ -44,11 +45,10 @@ const App = () => {
 
   return (
     <div className={css.appContainer}>
-      <h1 className={css.title}>Sip Happens Café</h1>
-      <p className={css.description}>
-        Please leave your feedback about our service by selecting one of the
-        options below.
-      </p>
+      <Description
+        title="Sip Happens Café"
+        description="Please leave your feedback about our service by selecting one of the options below."
+      />
       <Options
         options={OPTIONS}
         onFeedback={updateFeedback}
